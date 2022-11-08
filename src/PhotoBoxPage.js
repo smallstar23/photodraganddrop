@@ -46,9 +46,11 @@ const previewFn = (file) => {
     if(target.type.split('/')[0]==='image'){
       setImgTag(true)
       setFileSize(getByteSize(target.size))
+      setImgName(target.name)
     }else{
       setImgTag(false)
       setFileSize(getByteSize(target.size))
+      setImgName(target.name)
     }
 
     const fileReader = new FileReader();
